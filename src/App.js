@@ -13,7 +13,7 @@ const App = () => {
     useEffect(() => {
       const fetchData = async () => {
           try {
-              await axios.get('http://127.0.0.1:8000/');
+              await axios.get('https://aiplanet-backend-lbxk.onrender.com/');
               console.log("GET request");
           } catch (error) {
               console.error("Error during GET request:", error);
@@ -29,7 +29,7 @@ const App = () => {
         setMessages((prev) => [...prev, { sender: 'user', text }]);
       if (text){
         try {
-            const response = await axios.post(`http://127.0.0.1:8000/sendmessage?question=${text}`,
+            const response = await axios.post(`https://aiplanet-backend-lbxk.onrender.com/sendmessage?question=${text}`,
               {
                 headers: {
                     "Content-Type": "application/json",

@@ -20,7 +20,7 @@ const Header = () => {
     formdata.append("files", event.target.files[0]);
     setLoading(true);
     try {
-      const response = await axios.post("http://127.0.0.1:8000/", formdata, {
+      const response = await axios.post("https://aiplanet-backend-lbxk.onrender.com/", formdata, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
