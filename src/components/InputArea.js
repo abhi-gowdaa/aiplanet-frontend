@@ -5,6 +5,7 @@ import SendIcon from '@mui/icons-material/Send';
 const InputArea = ({ onSend }) => {
     const [message, setMessage] = useState('');
 
+    //handling input text
     const handleSend = () => {
         if (message.trim()) {
             onSend(message);
